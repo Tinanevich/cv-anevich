@@ -3,9 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__button__burger" id="button__burger">
+            <p class="header__button__burger-line"></p>
+            <p class="header__button__burger-line-midle"></p>
+            <p class="header__button__burger-line"></p>
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup__background close"></div>
+            <div class="navigation">
+                <button class="cross close"></button>
+                <div class="navigation__block">
+                    <ul class="navigation__list">
+                        <li class="navigation__elem"><a class="navigation__link" href="#about">Про меня</a></li>
+                        <li class="navigation__elem"><a class="navigation__link" href="#experience">Опыт</a></li>
+                        <li class="navigation__elem"><a class="navigation__link" href="#contacts">Контакты</a></li>
+                    </ul>
+                    <ul class="navigation__social-links">
+                        <li class="social-links-elem">
+                            <a href="#" class="social-links__link" target="_blank">
+                                <div class="popup-social__link social-links__link--git"></div>
+                            </a>
+                        </li>
+                        <li class="social-links-elem">
+                            <a href="#" class="social-links__link" target="_blank">
+                                <div class="popup-social__link social-links__link--instagram"></div>
+                            </a>
+                        </li>
+                        <li class="social-links-elem">
+                            <a href="#" class="social-links__link" target="_blank">
+                                <div class="popup-social__link social-links__link--facebook"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__social">
+            <ul class="social-links header__social-links">
+                <li class="social-links__elem">
+                    <a class="social-links__link" href="#" target="_blank">
+                        <div class="header__link social-links__link--facebook"></div>
+                    </a>
+                </li>
+                <li class="social-links__elem">
+                    <a class="social-links__link" href="#" target="_blank">
+                        <div class="header__link social-links__link--instagram"></div>
+                    </a>
+                </li>
+                <li class="social-links__elem">
+                    <a class="social-links__link" href="#" target="_blank">
+                        <div class="header__link social-links__link--git"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="header__social-line"></div>
+            <div class="header__social-text">
+                Социальные сети
+            </div>
+        </div>
+        <section class="container header__container">
+            <div class="header__container-block">
+                <div class="header__greeting">
+                    <div class="section-title">
+                        <div class="section-title__circle"></div>
+                        <div class="section-title__text">
+                            Меня зовут Александра Смит
+                        </div>
+                    </div>
+                    <h1 class="header__greeting-title">
+                        Я web-разработчик из города Москва
+                    </h1>
+                    <div class="header__greeting-button">
+                        <a class="button button--yellow" href="#portfolio">
+                            Портфолио
+                        </a>
+                        <a class="button" href="about">
+                            Про меня
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="main">
+        <section class="main__experience" id="experience">
+            <div class="section__block">
+                <div class="section-title section-title__middle">
+                    <div class="section-title__circle section-title__circle--middle"></div>
+                    <h3 class="section-title__text section-title__text--middle">
+                    Опыт
+                    </h3>
+               </div>
+               <div class="greeting-title__block">
+                <h2 class="greeting-title">Чем я буду полезна</h2>
+               </div>
+               <div class="line">
+                    <div class="line__item line__item--middle line__item--bottom-60 line__item--top-25"></div>
+               </div>
+              <div class="experience__items experience__items--left-65">
+                <div class="experience__education experience__item">
+                    <div class="experience__list">
+                        <div class="line-circle"></div>
+                        <div class="experience__vertical-line"></div>
+                    </div>
+                  <div class="experience__info">
+                    <h3 class="experience__title">Образование</h3>
+                    <div class="experience__skill">
+                        <div class="skill__header">
+                            <div class="skill__circle-icon experience__circle-icon">
+                                <div class="skill__circle skill__circle--line"></div>
+                                <div class="skill__icon skill__icon--university"></div>
+                            </div>
+                            <div class="skill__header-info">
+                                <h3 class="skill__title">
+                                    МГТУ им. Н. Э. Баумана
+                                </h3>
+                                <p class="skill__header-text">
+                                    Диплом магистра | Москва (2014-2020)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill__text-block">
+                            <p class="skill__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="experience__skill experience__skill--top-5">
+                        <div class="skill__header">
+                            <div class="skill__circle-icon experience__circle-icon">
+                                <div class="skill__circle skill__circle--line"></div>
+                                <div class="skill__icon skill__icon--courses"></div>
+                            </div>
+                        <div class="skill__header-info">
+                            <h3 class="skill__title">
+                                Udemy
+                            </h3>
+                            <p class="skill__header-text">
+                                Курсы по Web-разработке
+                            </p>
+                        </div>
+                      </div>
+                      <div class="skill__text-block">
+                        <p class="skill__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="experience__job experience__item experience__item--top-40">
+                    <div class="experience__list">
+                        <div class="line-circle"></div>
+                        <div class="experience__vertical-line"></div>
+                    </div>
+                    <div class="experience__info">
+                        <h3 class="experience__title" id="experience">Опыт работы</h3>
+                    <div class="experience__skill experience__skill--top-5">
+                        <div class="skill__header">
+                            <div class="skill__circle-icon experience__circle-icon">
+                            <div class="skill__circle skill__circle--line"></div>
+                            <div class="skill__icon skill__icon--developer"></div>
+                            </div>
+                        <div class="skill__header-info">
+                            <h3 class="skill__title">
+                                Front-End Developer
+                            </h3>
+                            <p class="skill__header-text">
+                                EPAM | Москва (2018-2019)
+                            </p>
+                        </div>
+                      </div>
+                      <div class="skill__text-block">
+                        <p class="skill__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="experience__skill experience__skill--top-5">
+                        <div class="skill__header">
+                            <div class="skill__circle-icon experience__circle-icon">
+                            <div class="skill__circle skill__circle--line"></div>
+                            <div class="skill__icon skill__icon--designer"></div>
+                            </div>
+                            <div class="skill__header-info">
+                                <h3 class="skill__title">
+                                    UI/UX Designer
+                                </h3>
+                                <p class="skill__header-text">
+                                    Squad Team | Москва (2018)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="skill__text-block">
+                            <p class="skill__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="contacts" id="contacts">
+            <div class="contacts__block">
+                <div class="photo photo__contacts"></div>
+                <div class="contacts__info">
+                    <div class="section-title">
+                    <div class="section-title__circle"></div>
+                        <h3 class="section-title__text">
+                            Контакты
+                        </h3>
+                    </div>
+                    <h3 class="greeting-title">Свяжитесь со мной</h3>
+                    <div class="line">
+                    <div class="line__item margin__bottom-20"></div>
+                    </div>
+                    <p class="contacts__description margin__bottom-20">Любым удобным для вас способом:</p>
+                    <ul class="contacts__list margin__bottom-20">
+                        <li class="contacts__link-block">
+                            <a class="contacts__link" href="#" target="_blank">
+                            <div class="contacts__link-inner-block contacts__link-block--facebook"></div>
+                            </a>
+                        </li>
+                        <li class="contacts__link-block">
+                            <a class="contacts__link" href="#" target="_blank">
+                            <div class="contacts__link-inner-block contacts__link-block--telegram">
+                            </div>
+                            </a>
+                        </li>
+                        <li class="contacts__link-block">
+                            <a class="contacts__link" href="#" target="_blank">
+                            <div class="contacts__link-inner-block contacts__link-block--instagram">
+                            </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="contacts__description margin__bottom-20">
+                    Или оставьте ваши данные и я сам вам напишу:
+                    </p>
+                <form class="form" id="form">
+                    <div class="form__inner-block">
+                        <div class="form__header">
+                        <div class="form__header-block">
+                            <fieldset class="form__fields">
+                            <legend class="form__legend">Ваше имя</legend>
+                            <input class="form__input"
+                                    type="text"
+                                    id="input-name"
+                                    name="name"
+                                    placeholder="Иван">
+                            </fieldset>
+                            <label class="form__label"
+                                id="label-name"
+                                for="input-name">
+                                Слишком мало символов
+                            </label>
+                        </div>
+                        <div class="form__header-block">
+                            <fieldset class="form__fields">
+                            <legend class="form__legend">Ваша почта</legend>
+                            <input class="form__input"
+                                    id="input-email"
+                                    type="text"
+                                    name="email"
+                                    placeholder="Email">
+                            </fieldset>
+                            <label class="form__label"
+                                id="label-email"
+                                for="input-email">
+                                Некорректно введен Email
+                            </label>
+                        </div>
+                        </div>
+                    <div class="form__body">
+                        <fieldset class="form__fields form__fields--message">
+                            <legend class="form__legend">Ваше сообщение</legend>
+                            <textarea name="messege" cols="30" rows="10" id="input-message"></textarea>
+                        </fieldset>
+                      <label class="form__label"
+                             for="input-message"
+                             id="label-message">
+                             Введите минимум 10 знаков
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__checkbox">
+                        <div class="form__checkbox-box">
+                            <input class="form__checkbox-input" id="form-checkbox" type="checkbox">
+                            <a class="form__checkbox-label" target="_blank" href="/">
+                                Я согласен(а) с политикой конфиденциальности
+                            </a>
+                        </div>
+                        <label class="form__label"
+                            for="form-checkbox"
+                            id="label-checkbox">
+                            Поставьте галочку
+                        </label>
+                  </div>
+                  <button class="button button__contacts button--yellow"
+                          type="submit"
+                          form="form">
+                          Отправить сообщение
+                  </button>
+                </form>
+              </div>
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
