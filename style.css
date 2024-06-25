@@ -487,7 +487,7 @@ li.navigation__elem::before {
     font-style: normal;
     line-height: normal;
     font-weight: 500;
-    height: 18px;
+    white-space: nowrap;
 }
 .form__fields--message {
     width: 585px;
