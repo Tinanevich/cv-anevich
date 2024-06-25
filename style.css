@@ -541,6 +541,9 @@ textarea {
     display: flex;
     gap: 10px;
 }
+.form__checkbox-label {
+    width: 157px;
+}
 .form__checkbox-label span {
     color: #000000;
 }
