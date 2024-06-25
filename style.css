@@ -497,6 +497,7 @@ li.navigation__elem::before {
     position: relative;
     top: -5px;
     left: 8px;
+    bottom: -13px;
     width: 90%;
     background: none;
     border: none;
@@ -601,7 +602,7 @@ textarea {
     .header__social {
         display: none;
     }
-    .header__container {
+    .header__container-block {
         margin-left: 10px;
     }
     .experience__items {
