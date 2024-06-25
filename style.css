@@ -536,13 +536,14 @@ textarea {
 }
 .form__checkbox-input {
     display: none;
+    margin: 0;
 }
 .form__checkbox-box {
     display: flex;
     gap: 10px;
 }
 .form__checkbox-label {
-    width: 157px;
+    min-width: 100%;
 }
 .form__checkbox-label span {
     color: #000000;
