@@ -529,7 +529,7 @@ textarea {
 .form__checkbox {
     font-size: 12px;
     font-weight: 500;
-    max-width: 170px;
+    width: 180px;
     margin: 0px auto;
     margin-bottom: 20px;
     display: none;
@@ -675,7 +675,7 @@ textarea {
     .form__checkbox {
         display: block;
     }
-      .form__checkbox-input {
+    .form__checkbox-input {
         display: block;
     }
     .button__contacts {

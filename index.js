@@ -80,7 +80,6 @@ inputMessage.addEventListener('input', () => {
 
 inputCheckbox.addEventListener('input', () => {
     if (clicked) {
-      if(inputCheckbox.classList.contains('active')) {
         if (!inputCheckbox.checked) {
           labelCheckbox.classList.add("form__label--error");
         } else {
@@ -88,7 +87,7 @@ inputCheckbox.addEventListener('input', () => {
         }
       }
     }
-  })
+)
 
 function emailIsValid (email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -100,8 +99,8 @@ function messageIsValid (message) {
     return message.trim().length > 10
 }
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
     labelName.classList.remove("form__label--error");
     labelEmail.classList.remove("form__label--error");
     labelMessage.classList.remove("form__label--error");
@@ -119,7 +118,7 @@ form.addEventListener("submit", (event) => {
             labelEmail.classList.add("form__label--error");
         }
         if (!name.length) {
-            labelName.innerHTML = 'Введите Имя';
+            labelName.innerHTML = 'Введите имя';
             labelName.classList.add("form__label--error");
         } else if (!nameIsValid(name)) {
             labelName.innerHTML = 'Имя содержит меньше 2 знаков'
@@ -132,19 +131,11 @@ form.addEventListener("submit", (event) => {
             labelMessage.innerHTML = 'Введите минимум 10 знаков';
             labelMessage.classList.add("form__label--error");
         }
-        if (inputCheckbox.classList.contains('active')) {
-            if (!checkbox) {
-              labelCheckbox.classList.add("form__label--error");
-            }
-          }
-          if (messageIsValid(message) && nameIsValid(name) && emailIsValid(email)) {
-            if (inputCheckbox.classList.contains('active')) {
-                if (checkbox) {
-                    inputEmail.value = "";
-                    inputName.value = "";
-                    inputMessage.value = "";
-                    inputCheckbox.checked = false;
-                }
-            }
-          }
+        if (!checkbox) {
+            labelCheckbox.classList.add("form__label--error");
+            labelCheckbox.innerHTML = 'Поставьте галочку';
+        } else {
+            labelCheckbox.classList.remove("form__label--error");
+        }
   });
+  fetch('https://jsonplaceholder.typicode.com/')
