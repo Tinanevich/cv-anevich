@@ -593,7 +593,7 @@ textarea {
   }
   @media (max-width: 980px) {
     .contacts__block {
-        margin: 0 10px;
+        margin: 0 auto;
         justify-content: center;
         gap: 20px;
     }
