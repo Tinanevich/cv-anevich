@@ -531,7 +531,7 @@ textarea {
     font-weight: 500;
     width: 180px;
     margin: 0px auto;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     display: none;
 }
 .form__checkbox-input {
@@ -539,10 +539,10 @@ textarea {
 }
 .form__checkbox-box {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
-.form__checkbox-link {
-    text-decoration: black;
+.form__checkbox-label span {
+    color: #000000;
 }
 
 @media (max-width: 1350px) {
@@ -568,7 +568,7 @@ textarea {
         gap: 0;
     }
     .contacts__block {
-        margin-left: 50px;
+        margin-left: 52px;
         display: flex;
         gap: 70px;
     }
@@ -593,9 +593,15 @@ textarea {
   }
   @media (max-width: 980px) {
     .contacts__block {
-        margin: 0 auto;
+        margin: 0 10px;
         justify-content: center;
         gap: 20px;
+    }
+    .section__block {
+        padding-bottom: 40px;
+    }
+    .main {
+        padding-top: 40px;
     }
   }
   @media (max-width: 900px) {
