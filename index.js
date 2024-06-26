@@ -137,5 +137,30 @@ form.addEventListener("submit", (e) => {
         } else {
             labelCheckbox.classList.remove("form__label--error");
         }
-  });
-  fetch('https://jsonplaceholder.typicode.com/')
+        if (messageIsValid(message) && nameIsValid(name) && emailIsValid(email)) {
+            if (checkbox) {
+                query();
+                inputEmail.value = "";
+                inputName.value = "";
+                inputMessage.value = "";
+                inputCheckbox.checked = false;
+            }
+            } else {
+              query();
+              inputEmail.value = "";
+              inputName.value = "";
+              inputMessage.value = "";
+            }
+
+});
+
+const query = async () => {
+
+    let response = await fetch('https://jsonplaceholder.typicode.com/', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+
+    let result = await response.json();
+    alert(result.message);
+}
