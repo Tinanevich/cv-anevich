@@ -516,6 +516,7 @@ li.navigation__elem::before {
 }
 .form__input::placeholder {
     color: #000;
+    opacity: .5;
 }
 .form__input:focus, textarea:focus {
     outline: none;
@@ -529,13 +530,13 @@ textarea {
 .form__checkbox {
     font-size: 12px;
     font-weight: 500;
-    width: 180px;
+    width: 300px;
     margin: 0px auto;
     margin-bottom: 2px;
-    display: none;
+    /* display: none; */
 }
 .form__checkbox-input {
-    display: none;
+    display: block;
     margin: 0;
 }
 .form__checkbox-box {
@@ -684,9 +685,7 @@ textarea {
     }
     .form__checkbox {
         display: block;
-    }
-    .form__checkbox-input {
-        display: block;
+        width: 180px;
     }
     .button__contacts {
         margin: 0 auto;

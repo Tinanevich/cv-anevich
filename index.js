@@ -1,22 +1,24 @@
-const button = document.getElementById('button__burger');
-const popup = document.getElementById('popup');
+const burgerButton = document.getElementById('button__burger');
+const popupMenu = document.getElementById('popup__menu');
+const closeButtons = document.querySelectorAll('.close');
 
-button.addEventListener('click', () => {
-    popup.classList.add('popup--open')
+burgerButton.addEventListener('click', () => {
+    popupMenu.classList.add('popup--open')
 })
-const closes = document.querySelectorAll('.close');
-    closes.forEach(item => {
-        item.addEventListener('click', close);
-    });
-function close() {
-    popup.classList.remove('popup--open');
+
+closeButtons.forEach(item => {
+    item.addEventListener('click', closeMenu);
+});
+
+function closeMenu() {
+    popupMenu.classList.remove('popup--open');
 }
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
     for (let smoothLink of smoothLinks) {
         smoothLink.addEventListener('click', function (e) {
             e.preventDefault();
             const id = smoothLink.getAttribute('href');
-            close();
+            closeMenu();
             document.querySelector(id).scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -25,23 +27,23 @@ const smoothLinks = document.querySelectorAll('a[href^="#"]');
     };
 
 const form = document.getElementById("form");
-const inputName = document.getElementById("input-name");
-const inputEmail = document.getElementById("input-email");
-const inputMessage = document.getElementById("input-message");
-const inputCheckbox = document.getElementById("form-checkbox");
+const formInputName = document.getElementById("input-name");
+const formInputEmail = document.getElementById("input-email");
+const formInputMessage = document.getElementById("input-message");
+const formInputCheckbox = document.getElementById("form-checkbox");
 const labelName = document.getElementById("label-name");
 const labelEmail = document.getElementById("label-email");
 const labelMessage = document.getElementById("label-message");
 const labelCheckbox = document.getElementById("label-checkbox");
 
-let clicked = false;
+let isClicked = false;
 
-inputName.addEventListener('input', () => {
-    if (clicked) {
-    if (!inputName.value.length) {
+formInputName.addEventListener('input', () => {
+    if (isClicked) {
+    if (!formInputName.value.length) {
         labelName.innerHTML = 'Введите Имя';
         labelName.classList.add("form__label--error");
-    } else if (!nameIsValid(inputName.value)) {
+    } else if (!nameIsValid(formInputName.value)) {
         labelName.innerHTML = 'Имя содержит меньше 2 знаков'
         labelName.classList.add("form__label--error");
     } else {
@@ -50,12 +52,12 @@ inputName.addEventListener('input', () => {
     }
 });
 
-inputEmail.addEventListener('input', () => {
-    if (clicked) {
-    if (!inputEmail.value.length) {
+formInputEmail.addEventListener('input', () => {
+    if (isClicked) {
+    if (!formInputEmail.value.length) {
         labelEmail.innerHTML = 'Введите Email'
         labelEmail.classList.add("form__label--error");
-    } else if (!emailIsValid(inputEmail.value)) {
+    } else if (!emailIsValid(formInputEmail.value)) {
         labelEmail.innerHTML = 'Некорректный Email';
         labelEmail.classList.add("form__label--error");
     } else {
@@ -64,12 +66,12 @@ inputEmail.addEventListener('input', () => {
     }
 });
 
-inputMessage.addEventListener('input', () => {
-    if (clicked) {
-    if (!inputMessage.value.length && clicked) {
+formInputMessage.addEventListener('input', () => {
+    if (isClicked) {
+    if (!formInputMessage.value.length && clicked) {
         labelMessage.innerHTML = 'Введите сообщение';
         labelMessage.classList.add("form__label--error");
-    } else if (!messageIsValid(inputMessage.value)) {
+    } else if (!messageIsValid(formInputMessage.value)) {
         labelMessage.innerHTML = 'Введите минимум 10 знаков';
         labelMessage.classList.add("form__label--error");
     } else {
@@ -78,9 +80,9 @@ inputMessage.addEventListener('input', () => {
     }
 });
 
-inputCheckbox.addEventListener('input', () => {
-    if (clicked) {
-        if (!inputCheckbox.checked) {
+formInputCheckbox.addEventListener('input', () => {
+    if (isClicked) {
+        if (!formInputCheckbox.checked) {
           labelCheckbox.classList.add("form__label--error");
         } else {
           labelCheckbox.classList.remove("form__label--error");
@@ -105,11 +107,11 @@ form.addEventListener("submit", (e) => {
     labelEmail.classList.remove("form__label--error");
     labelMessage.classList.remove("form__label--error");
     labelCheckbox.classList.remove("form__label--error");
-    const email = inputEmail.value;
-    const name = inputName.value;
-    const message = inputMessage.value;
-    const checkbox = inputCheckbox.checked;
-    clicked = true;
+    const email = formInputEmail.value;
+    const name = formInputName.value;
+    const message = formInputMessage.value;
+    const checkbox = formInputCheckbox.checked;
+    isClicked = true;
         if (!email.length) {
             labelEmail.innerHTML = 'Введите Email'
             labelEmail.classList.add("form__label--error");
@@ -140,27 +142,27 @@ form.addEventListener("submit", (e) => {
         if (messageIsValid(message) && nameIsValid(name) && emailIsValid(email)) {
             if (checkbox) {
                 query();
-                inputEmail.value = "";
-                inputName.value = "";
-                inputMessage.value = "";
-                inputCheckbox.checked = false;
+                formInputEmail.value = "";
+                formInputName.value = "";
+                formInputMessage.value = "";
+                formInputCheckbox.checked = false;
             }
             } else {
-              query();
-              inputEmail.value = "";
-              inputName.value = "";
-              inputMessage.value = "";
+              formInputEmail.value = "";
+              formInputName.value = "";
+              formInputMessage.value = "";
             }
 
 });
 
 const query = async () => {
 
-    let response = await fetch('https://jsonplaceholder.typicode.com/', {
+    let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       body: new FormData(form)
     });
 
-    let result = await response.json();
-    alert(result.message);
+    const message = await response.json()
+
+   return await response.json(alert(`Данные отправлены, ваш номер ${message.id}`));
 }
