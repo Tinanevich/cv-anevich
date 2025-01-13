@@ -89,7 +89,7 @@ li {
     top: 0;
     left: 0;
     bottom: 0;
-    background: #FFA501;
+    background: #ac89B4;
 }
 
 .cross {
@@ -145,22 +145,23 @@ li.navigation__elem::before {
     transform: translate(-50%);
     justify-content: center;
     bottom: 50px;
+    text-decoration:none;
 }
 .popup-social__link {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     transition: ease .5s;
 }
 .social-links__link--git {
     background: url(./assets/github.svg) no-repeat center;
     background-size: contain;
 }
-.social-links__link--instagram {
-    background: url(./assets/instagram.svg) no-repeat center;
+.social-links__link--linkedin {
+    background: url(./assets/linkedin.svg) no-repeat center;
     background-size: contain;
 }
-.social-links__link--facebook {
-    background: url(./assets/facebook.svg) no-repeat center;
+.social-links__link--behance {
+    background: url(./assets/behance.svg) no-repeat center;
     background-size: cover;
 }
 .header__social {
@@ -179,8 +180,8 @@ li.navigation__elem::before {
 .header__link {
     transform: rotate(-90deg);
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 .header__social-text {
     writing-mode: vertical-rl;
@@ -219,7 +220,7 @@ li.navigation__elem::before {
     height: 36px;
     border-radius: 50%;
     z-index: 0;
-    background: #ffA501;
+    background: #ac89B4;
 }
 .section-title__text {
     position: relative;
@@ -265,7 +266,7 @@ li.navigation__elem::before {
     gap: 44px;
 }
 .button--yellow {
-    background: #FFA501;
+    background: #ac89B4;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 12px 26px;
 }
@@ -288,7 +289,7 @@ li.navigation__elem::before {
 .line__item {
     width: 60px;
     height: 3px;
-    background: #FFA501;
+    background: #ac89B4;
 }
 .line__item--middle {
     margin: 0 auto;
@@ -305,7 +306,7 @@ li.navigation__elem::before {
     left: 0;
 }
 .skill__circle {
-    background: #FFA501;
+    background: #ac89B4;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -382,7 +383,7 @@ li.navigation__elem::before {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: #FFA501;
+    background: #ac89B4;
     align-self: center;
 }
 .experience__vertical-line {
@@ -416,6 +417,7 @@ li.navigation__elem::before {
 .skill__header-text {
     font-size: 12px;
     font-weight: 500;
+    text-decoration: none;
 }
 .skill__circle--line::before {
     content: "";
@@ -453,12 +455,12 @@ li.navigation__elem::before {
     height: 30px;
     cursor: pointer;
 }
-.contacts__link-block--facebook {
-    background: url(./assets/facebook.svg) no-repeat center;
+.contacts__link-block--behance {
+    background: url(./assets/behance.svg) no-repeat center;
     background-size: contain;
 }
-.contacts__link-block--instagram {
-    background: url(./assets/instagram.svg) no-repeat center;
+.contacts__link-block--linkedin {
+    background: url(./assets/linkedin.svg) no-repeat center;
     background-size: contain;
 }
 .contacts__link-block--telegram {
@@ -533,7 +535,6 @@ textarea {
     width: 300px;
     margin: 0px auto;
     margin-bottom: 2px;
-    /* display: none; */
 }
 .form__checkbox-input {
     display: block;
