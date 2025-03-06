@@ -379,19 +379,6 @@ li.navigation__elem::before {
     position: relative;
     top: 5px;
 }
-.line-circle {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: #ac89B4;
-    align-self: center;
-}
-.experience__vertical-line {
-    width: 1px;
-    background: #151812;
-    height: 96%;
-    margin: 0 auto;
-}
 .experience__title {
     font-size: 20px;
     position: relative;
@@ -418,15 +405,6 @@ li.navigation__elem::before {
     font-size: 12px;
     font-weight: 500;
     text-decoration: none;
-}
-.skill__circle--line::before {
-    content: "";
-    width: 42px;
-    height: 1px;
-    background: black;
-    position: absolute;
-    left: -42px;
-    top: 18px;
 }
 .photo {
     background: url(./assets/girl.jpg) no-repeat center;
@@ -611,9 +589,6 @@ textarea {
     }
     .header__container {
         color: #FFFFFF;
-    }
-    .button--about {
-        color:  #FFFFFF;
     }
   }
   @media (max-width: 900px) {
