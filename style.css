@@ -152,8 +152,8 @@ li.navigation__elem::before {
     height: 25px;
     transition: ease .5s;
 }
-.social-links__link--git {
-    background: url(./assets/github.svg) no-repeat center;
+.social-links__link--telegram {
+    background: url(./assets/telegram.svg) no-repeat center;
     background-size: contain;
 }
 .social-links__link--linkedin {
@@ -198,14 +198,12 @@ li.navigation__elem::before {
     height: 70px;
 }
 .main, .container.header__container {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
     margin: 0 auto;
     max-width: 1140px;
     height: 100%;
 }
 .main {
-    padding-top: 120px;
+    padding-top: 80px;
 }
 .section-title {
     position: relative;
@@ -214,20 +212,12 @@ li.navigation__elem::before {
     font-weight: 700;
     letter-spacing: .4px;
 }
-.section-title__circle {
-    position: relative;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    z-index: 0;
-    background: #ac89B4;
-}
 .section-title__text {
     position: relative;
-    font-size: 16px;
-    z-index: 1;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
     top: 5px;
-    left: -22px;
 }
 .header__container {
     border: none;
@@ -240,15 +230,17 @@ li.navigation__elem::before {
 }
 .header__greeting-title {
     max-width: 532px;
-    font-size: 48px;
+    font-size: 20px;
     font-style: normal;
-    line-height: 60px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     margin-bottom: 25px;
+}
+.header__greeting-summary {
+    font-size: 18px;
+    font-weight: 500;
 }
 .button {
     display: grid;
@@ -256,19 +248,15 @@ li.navigation__elem::before {
     position: relative;
     cursor: pointer;
     color: #000;
-    left: 0;
+    margin: 50px 0;
     transition: ease .3s;
-    font-weight: 700;
-    font-size: 14px;
-}
-.header__greeting-button {
-    display: flex;
-    gap: 44px;
+    font-weight: 600;
+    font-size: 15px;
 }
 .button--lilac {
     background: #ac89B4;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 12px 26px;
+    width: 200px;
 }
 .section-title__middle {
     justify-content: center;
@@ -279,7 +267,6 @@ li.navigation__elem::before {
     transform: translate(-50%);
 }
 .greeting-title {
-    font-size: 36px;
     line-height: 60px;
     letter-spacing: 1px;
 }
@@ -364,14 +351,38 @@ li.navigation__elem::before {
 }
 .section__block {
     display: grid;
-    padding-bottom: 120px;
+}
+.portfolio {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 20px;
+}
+.portfolio__cake, .portfolio__goods {
+    display: grid;
+}
+.portfolio__cake__info {
+    background: url(./assets/Cake.jpg) no-repeat center;
+    width: 550px;
+    height: 350px;
+    background-size: cover;
+    border: 1px solid rgb(251, 239, 239);
+}
+.portfolio__text {
+    margin-top: 10px;
+    color: black;
+}
+.portfolio__goods__info {
+    background: url(./assets/Goods.jpg) no-repeat center;
+    width: 550px;
+    height: 350px;
+    background-size: cover;
+    border: 1px solid rgb(251, 239, 239);
 }
 .experience__items {
     display: flex;
     gap: 136px;
-}
-.experience__items--left-65 {
-    margin-left: 65px;
+    padding-bottom: 30px;
 }
 .experience__item {
     display: flex;
@@ -406,128 +417,6 @@ li.navigation__elem::before {
     font-weight: 500;
     text-decoration: none;
 }
-.photo {
-    background: url(./assets/girl.jpg) no-repeat center;
-    width: 400px;
-    height: 600px;
-    background-size: cover;
-}
-.contacts__block {
-    margin-left: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px;
-    border-bottom: 1px solid black;
-    padding-bottom: 92px;
-}
-.contacts__description {
-    font-size: 14px;
-    font-weight: 700;
-}
-.contacts__list {
-    display: flex;
-    gap: 25px;
-}
-.contacts__link-inner-block {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-.contacts__link-block--behance {
-    background: url(./assets/behance.svg) no-repeat center;
-    background-size: contain;
-}
-.contacts__link-block--linkedin {
-    background: url(./assets/linkedin.svg) no-repeat center;
-    background-size: contain;
-}
-.contacts__link-block--telegram {
-    background: url(./assets/telegram.svg) no-repeat center;
-    background-size: contain;
-}
-.form__header {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-.form__fields {
-    width: 280px;
-    height: 55px;
-    flex-shrink: 0;
-    border: 1px solid #000;
-    padding-left: 12px;
-    display: grid;
-}
-.form__legend {
-    color: #000;
-    font-size: 12px;
-    position: relative;
-    padding: 0 8px;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    line-height: normal;
-    font-weight: 500;
-    white-space: nowrap;
-}
-.form__fields--message {
-    width: 585px;
-    width: 100%;
-    height: 190px;
-}
-.form__input {
-    position: relative;
-    top: -5px;
-    left: 8px;
-    width: 90%;
-    background: none;
-    border: none;
-}
-.form__label {
-    color: #e61919;
-    opacity: 0;
-    position: relative;
-    left: -5px;
-    font-size: 12px;
-    width: 100%;
-}
-.form__label--error {
-    opacity: 1;
-    left: 5px;
-}
-.form__input::placeholder {
-    color: #000;
-    opacity: .5;
-}
-.form__input:focus, textarea:focus {
-    outline: none;
-}
-textarea {
-    resize: none;
-}
-.margin__bottom-20 {
-    margin-bottom: 20px;
-}
-.form__checkbox {
-    font-size: 12px;
-    font-weight: 500;
-    width: 300px;
-    margin: 0px auto;
-    margin-bottom: 2px;
-}
-.form__checkbox-input {
-    display: block;
-    margin: 0;
-}
-.form__checkbox-box {
-    display: flex;
-    gap: 10px;
-}
-.form__checkbox-label {
-    min-width: 100%;
-}
-.form__checkbox-label span {
-    color: #000000;
-}
 
 @media (max-width: 1350px) {
     .header__social {
@@ -542,8 +431,15 @@ textarea {
         border-left: none;
         border-right: none;
     }
+    .portfolio {
+        display: grid;
+        gap: 30px;
+    }
   }
   @media (max-width: 1200px) {
+    .main, .container.header__container {
+        margin: 0 10px;
+    }
     .experience__items--left-65 {
         margin-left: 0;
     }
@@ -551,39 +447,9 @@ textarea {
         justify-content: center;
         gap: 0;
     }
-    .contacts__block {
-        margin-left: 52px;
-        display: flex;
-        gap: 70px;
-    }
-    .form__fields {
-        width: 200px;
-        height: 45px;
-        flex-shrink: 0;
-        border: 1px solid #000;
-        padding-left: 16px;
-        display: grid;
-    }
-    .form__fields--message {
-        width: 100%;
-        max-width: 440px;
-        height: 190px;
-    }
   }
-  @media (max-width: 1050px) {
-    .main {
-        border: none;
-    }
-  }
-  @media (max-width: 980px) {
-    .contacts__block {
-        margin: 0 auto;
-        justify-content: center;
-        gap: 20px;
-    }
-    .section__block {
-        padding-bottom: 40px;
-    }
+
+  @media (max-width: 1120px) {
     .main {
         padding-top: 40px;
     }
@@ -605,17 +471,12 @@ textarea {
     .experience__item--top-40 {
         margin-top: 40px;
     }
-    .photo {
-        width: 300px;
-        height: 340px;
-        background: url(./assets/girl.jpg) no-repeat center;
-        background-size: cover;
-    }
-    .photo__contacts {
-        display: none;
-    }
   }
   @media (max-width: 600px) {
+    .main, .container.header__container {
+
+        margin: 0 auto;
+    }
     .header {
         height: 640px;
     }
@@ -638,38 +499,12 @@ textarea {
     .greeting-title {
         font-size: 24px;
     }
-    .experience__info {
-        width: 250px;
+    .header__greeting-summary {
+        font-size: 15px;
+        font-weight: 400;
     }
-    .contacts__block {
-        width: 300px;
-    }
-    .form__fields {
-        width: 300px;
-        height: 45px;
-        flex-shrink: 0;
-        border: 1px solid #000;
-        padding-left: 16px;
-        display: grid;
-    }
-    .form__header {
-        gap: 0 25px;
-    }
-    .form__body {
-        width: 300px;
-    }
-    .form__fields--message {
-        width: 100%;
-        height: 143px;
-    }
-    .form__label {
-        font-size: 11px;
-    }
-    .form__checkbox {
-        display: block;
-        width: 180px;
-    }
-    .button__contacts {
-        margin: 0 auto;
+    .portfolio__cake__info, .portfolio__goods__info {
+        width: 360px;
+        height: 200px;
     }
   }
