@@ -356,10 +356,13 @@ li.navigation__elem::before {
     display: flex;
     justify-content: center;
     margin: 50px auto;
-    gap: 20px;
+    gap: 50px;
 }
 .portfolio__cake, .portfolio__goods {
     display: grid;
+}
+.portfolio__cake:hover, .portfolio__goods:hover {
+    opacity: .75;
 }
 .portfolio__cake__info {
     background: url(./assets/Cake.jpg) no-repeat center;
@@ -371,6 +374,8 @@ li.navigation__elem::before {
 .portfolio__text {
     margin-top: 10px;
     color: black;
+    display: flex;
+    justify-content: space-between;
 }
 .portfolio__goods__info {
     background: url(./assets/Goods.jpg) no-repeat center;
@@ -378,6 +383,9 @@ li.navigation__elem::before {
     height: 350px;
     background-size: cover;
     border: 1px solid rgb(251, 239, 239);
+}
+.portfolio__year {
+    color: rgb(192, 196, 196);
 }
 .experience__items {
     display: flex;
@@ -506,5 +514,8 @@ li.navigation__elem::before {
     .portfolio__cake__info, .portfolio__goods__info {
         width: 360px;
         height: 200px;
+    }
+    .portfolio__text {
+        display: grid;
     }
   }
