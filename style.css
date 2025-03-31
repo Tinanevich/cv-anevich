@@ -376,6 +376,7 @@ li.navigation__elem::before {
     color: black;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
 }
 .portfolio__goods__info {
     background: url(./assets/Goods.jpg) no-repeat center;
@@ -517,5 +518,6 @@ li.navigation__elem::before {
     }
     .portfolio__text {
         display: grid;
+        margin-top: 5px;
     }
   }
