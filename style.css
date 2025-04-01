@@ -369,7 +369,6 @@ li.navigation__elem::before {
     width: 550px;
     height: 350px;
     background-size: cover;
-    border: 1px solid rgb(251, 239, 239);
 }
 .portfolio__text {
     margin-top: 10px;
@@ -383,7 +382,6 @@ li.navigation__elem::before {
     width: 550px;
     height: 350px;
     background-size: cover;
-    border: 1px solid rgb(251, 239, 239);
 }
 .portfolio__year {
     color: rgb(192, 196, 196);
