@@ -353,15 +353,15 @@ li.navigation__elem::before {
     display: grid;
 }
 .portfolio {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: 50px auto;
     gap: 50px;
 }
-.portfolio__cake, .portfolio__goods {
+.portfolio__cake, .portfolio__goods, .portfolio__forest, .portfolio__tradeline {
     display: grid;
 }
-.portfolio__cake:hover, .portfolio__goods:hover {
+.portfolio__cake:hover, .portfolio__goods:hover, .portfolio__forest:hover, .portfolio__tradeline:hover {
     opacity: .75;
 }
 .portfolio__cake__info {
@@ -379,6 +379,18 @@ li.navigation__elem::before {
 }
 .portfolio__goods__info {
     background: url(./assets/Goods.jpg) no-repeat center;
+    width: 550px;
+    height: 350px;
+    background-size: cover;
+}
+.portfolio__forest__info {
+    background: url(./assets/Forest.jpg) no-repeat center;
+    width: 550px;
+    height: 350px;
+    background-size: cover;
+}
+.portfolio__tradeline__info {
+    background: url(./assets/Tradeline.jpg) no-repeat center;
     width: 550px;
     height: 350px;
     background-size: cover;
@@ -439,7 +451,8 @@ li.navigation__elem::before {
         border-right: none;
     }
     .portfolio {
-        display: grid;
+        /* display: grid; */
+        grid-template-columns: repeat(1, 1fr);;
         gap: 30px;
     }
   }
@@ -510,7 +523,7 @@ li.navigation__elem::before {
         font-size: 15px;
         font-weight: 400;
     }
-    .portfolio__cake__info, .portfolio__goods__info {
+    .portfolio__cake__info, .portfolio__goods__info, .portfolio__forest__info, .portfolio__tradeline__info {
         width: 360px;
         height: 200px;
     }
