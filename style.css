@@ -500,7 +500,6 @@ li.navigation__elem::before {
   }
   @media (max-width: 600px) {
     .main, .container.header__container {
-
         margin: 0 auto;
     }
     .header {
