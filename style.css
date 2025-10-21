@@ -358,14 +358,20 @@ li.navigation__elem::before {
     margin: 50px auto;
     gap: 50px;
 }
-.portfolio__cake, .portfolio__goods, .portfolio__forest, .portfolio__tradeline, .portfolio__betera {
+.portfolio__bidder, .portfolio__cake, .portfolio__goods, .portfolio__forest, .portfolio__tradeline, .portfolio__betera {
     display: grid;
 }
-.portfolio__cake:hover, .portfolio__goods:hover, .portfolio__forest:hover, .portfolio__tradeline:hover, .portfolio__betera:hover {
+.portfolio__bidder:hover, .portfolio__cake:hover, .portfolio__goods:hover, .portfolio__forest:hover, .portfolio__tradeline:hover, .portfolio__betera:hover {
     opacity: .75;
 }
 .portfolio__cake__info {
     background: url(./assets/Cake.jpg) no-repeat center;
+    width: 550px;
+    height: 350px;
+    background-size: cover;
+}
+.portfolio__bidder__info {
+    background: url(./assets/Bidder.jpg) no-repeat center;
     width: 550px;
     height: 350px;
     background-size: cover;
