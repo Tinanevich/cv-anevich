@@ -534,7 +534,7 @@ li.navigation__elem::before {
         font-size: 15px;
         font-weight: 400;
     }
-    .portfolio__cake__info, .portfolio__goods__info, .portfolio__forest__info, .portfolio__tradeline__info, .portfolio__betera__info {
+    .portfolio__bidder__info, .portfolio__cake__info, .portfolio__goods__info, .portfolio__forest__info, .portfolio__tradeline__info, .portfolio__betera__info {
         width: 360px;
         height: 200px;
     }
