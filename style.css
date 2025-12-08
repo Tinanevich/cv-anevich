@@ -307,7 +307,7 @@ li.navigation__elem::before {
 }
 .skill__icon--developer {
     width: 25px;
-    height: 20px;
+    height: 25px;
     background: url(./assets/developer.svg) no-repeat center;
     top: 16px;
     left: 15px;
